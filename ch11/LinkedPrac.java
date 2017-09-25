@@ -7,6 +7,19 @@ public class LinkedPrac {
         words.add("goodbye");
         words.add("this");
         words.add("that");
-        System.out.println(words);
+        LinkedList<String> allOdds = removeEvenLength(words);
+        System.out.println(allOdds);
+    }
+
+    // removes all strings of even length from the given linked list
+    public static LinkedList<String> removeEvenLength(LinkedList<String> list) {
+        Iterator<String> i = list.iterator();
+        while (i.hasNext()) {
+            String element = i.next();
+            if (element.length() % 2 == 0) {
+                i.remove();
+            }
+        }
+        return list;
     }
 }
