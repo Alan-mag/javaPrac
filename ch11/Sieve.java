@@ -7,7 +7,7 @@ public class Sieve {
         System.out.println();
 
         Scanner console = new Scanner(System.in);
-        System.out.print("Maximum number? ");
+        System.out.print("Maximum number for sieve? ");
         int max = console.nextInt();
 
         List<Integer> primes = sieve(max);
